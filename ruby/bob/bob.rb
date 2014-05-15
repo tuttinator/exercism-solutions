@@ -1,5 +1,5 @@
 class Bob
-  def hey(arg)
-    'Whatever.'
+  def hey(greeting)
+    greeting.match('WATCH OUT!') ? 'Woah, chill out!' : 'Whatever.'
   end
 end

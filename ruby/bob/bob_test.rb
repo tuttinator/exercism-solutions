@@ -13,7 +13,6 @@ class BobTest < MiniTest::Unit::TestCase
   end
 
   def test_shouting
-    skip
     assert_equal 'Woah, chill out!', ::Bob.new.hey('WATCH OUT!')
   end
 
