@@ -17,29 +17,24 @@ class BobTest < MiniTest::Unit::TestCase
   end
 
   def test_shouting_gibberish
-    skip
     gibberish = ('A'..'Z').to_a.shuffle[0,10].join
     assert_equal 'Woah, chill out!', ::Bob.new.hey(gibberish)
   end
 
   def test_asking_a_question
-    skip
     assert_equal 'Sure.', ::Bob.new.hey('Does this cryogenic chamber make me look fat?')
   end
 
   def test_asking_a_numeric_question
-    skip
     assert_equal 'Sure.', ::Bob.new.hey('You are, what, like 15?')
   end
 
   def test_asking_gibberish
-    skip
     gibberish = ('a'..'z').to_a.shuffle[0,10].join
     assert_equal 'Sure.', ::Bob.new.hey("#{gibberish}?")
   end
 
   def test_talking_forcefully
-    skip
     assert_equal 'Whatever.', ::Bob.new.hey("Let's go make out behind the gym!")
   end
 
