@@ -2,9 +2,11 @@ class Bob
   def hey(greeting)
     return 'Woah, chill out!' if is_uppercase? greeting
     case greeting
-    when /\?$/
+    when /\s\z/, ''
+      'Fine. Be that way!'
+    when /\?\z/
       'Sure.'
-    when 'Tom-ay-to, tom-aaaah-to.', /\!$/
+    else
       'Whatever.'
     end
   end
@@ -12,6 +14,6 @@ class Bob
   private
 
   def is_uppercase?(str)
-    str == str.upcase
+    str == str.upcase and str.match /[A-Z]/
   end
 end
